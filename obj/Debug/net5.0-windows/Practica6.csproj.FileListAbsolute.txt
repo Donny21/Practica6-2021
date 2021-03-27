@@ -12,7 +12,6 @@ C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\Practica6.
 C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\Practica6.dll
 C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\ref\Practica6.dll
 C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\Practica6.pdb
-C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\MainWindow.baml
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\RolesView.baml
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\UsuariosView.baml
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Practica6.g.resources
@@ -27,4 +26,11 @@ C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Practica6.
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NUsuariosView.g.cs
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NUsuariosView.baml
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NRolesView.g.cs
+C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\ControlzEx.dll
+C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\MahApps.Metro.dll
+C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\dony2\Documents\FULLSTACK\Practica6\bin\Debug\net5.0-windows\de\MahApps.Metro.resources.dll
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Practica6.csproj.CopyComplete
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\App.baml
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\MainWindow.baml
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NRolesView.baml

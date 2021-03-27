@@ -12,28 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Practica6.ModelView;
 using Practica6.Views;
+using MahApps.Metro.Controls;
 
 namespace Practica6
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
-            //InitializeComponent();
-        }
+            InitializeComponent();
+            MainViewModel Modelo = new MainViewModel();
+            this.DataContext = Modelo;
 
-        public void VentanaUsuarios(object sender, RoutedEventArgs e){
-            UsuariosView VentanaUsuarios = new UsuariosView();
-            VentanaUsuarios.ShowDialog();
-        }
-
-        public void VentanaRoles(object sender, RoutedEventArgs e){
-            RolesView VentanaRoles = new RolesView();
-            VentanaRoles.ShowDialog();
         }
     }
 }

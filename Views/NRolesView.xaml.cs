@@ -1,9 +1,10 @@
 using System.Windows;
 using Practica6.ModelView;
+using MahApps.Metro.Controls;
 
 namespace Practica6.Views
 {
-    public partial class NRolesView: Window
+    public partial class NRolesView: MetroWindow
     {
         public NRolesView(RolesViewModel NRolesView)
         {

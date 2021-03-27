@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IT2AyRt+3/4og69V4/IgDxuMi26bvHe3rf5UzC54BbGmCYy0iWWO6Pt9SApcNC0bNNnU724573memIbJ88XJNA==",
+  "dgSpecHash": "jlR1U9xOX5vZjt38hm7at5LRsveWN3MrwWry/JLQ3iyUlO2xUqF+1HrWnBWOk8/ADPINwaxNivP1xtjLlnNmtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dony2\\Documents\\FULLSTACK\\Practica6\\Practica6.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dony2\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\dony2\\.nuget\\packages\\mahapps.metro\\2.4.4\\mahapps.metro.2.4.4.nupkg.sha512",
+    "C:\\Users\\dony2\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\dony2\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using Practica6.Models;
 using Practica6.Views;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace Practica6.ModelView
 {
@@ -14,16 +15,18 @@ namespace Practica6.ModelView
         public event EventHandler CanExecuteChanged;
         public ObservableCollection<Usuarios> usuarios { get; set; }
         //CREAMOS NUESTRA COLECCION O LISTA DE ELEMENTOS
+        private IDialogCoordinator dialogCoordinator;
 
         public UsuariosViewModel Instancia { get; set; }
 
         public Usuarios Seleccionado { get; set; }
 
-        public UsuariosViewModel()
+        public UsuariosViewModel(IDialogCoordinator instance)
         {
             this.Instancia = this;
 
             this.usuarios = new ObservableCollection<Usuarios>();
+            this.dialogCoordinator = instance;
 
             this.usuarios.Add(new Usuarios(1, "Donny", true, "Adonias", "Tobar", "dony21.587@gmail.com", "1234"));
             this.usuarios.Add(new Usuarios(2, "DNY", true, "Esdras", "Jimenez", "esdrasjimenezaft@gmail.com", "1234"));
@@ -49,7 +52,7 @@ namespace Practica6.ModelView
             return true;
         }
 
-        public void Execute(object parametro)
+        public async void Execute(object parametro)
         {
             //CARGAMOS EL NUEVO ELEMENTO A LA COLECCION
             if (parametro.Equals("Nuevo"))
@@ -63,16 +66,27 @@ namespace Practica6.ModelView
             {
                 if (this.Seleccionado == null)
                 {
-                    MessageBox.Show("Debe seleccionar un elemento");
+                    await this.dialogCoordinator.ShowMessageAsync(this, 
+                    "Usuarios", "Debe seleccionar un elemento", MessageDialogStyle.Affirmative);
                 }
-                this.usuarios.Remove(Seleccionado);
+                else
+                {
+                    MessageDialogResult respuesta = await this.dialogCoordinator.ShowMessageAsync(this,
+                    "Eliminar Usuario", "¿Está seguro de Eliminar el Registro?", MessageDialogStyle.AffirmativeAndNegative);
+                    if (respuesta == MessageDialogResult.Affirmative)
+                    {
+                        this.usuarios.Remove(Seleccionado);
+                    }
+                }
+
             }
             //CONDICION PARA MODIFICAR UN ELEMENTO DE LA COLECCION
             else if (parametro.Equals("Modificar"))
             {
                 if (this.Seleccionado == null)
                 {
-                    MessageBox.Show("Debe seleccionar un elemento");
+                    await this.dialogCoordinator.ShowMessageAsync(this, "Usuarios", 
+                    "Debe seleccionar un elemento", MessageDialogStyle.Affirmative);
                 }
                 else
                 {

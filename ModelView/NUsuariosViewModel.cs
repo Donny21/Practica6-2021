@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Practica6.Models;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace Practica6.ModelView
 {
@@ -11,6 +12,7 @@ namespace Practica6.ModelView
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public event EventHandler CanExecuteChanged;
+        private IDialogCoordinator dialogCoordinator;
         public NUsuariosViewModel Instancia { get; set; }
         public UsuariosViewModel UsuariosViewModel { get; set; }
         public string Apellidos { get; set; }
@@ -22,10 +24,11 @@ namespace Practica6.ModelView
         public string HeightTxtPassword { get; set; } = "Auto";
         public Usuarios Usuario{get;set;}
 
-        public NUsuariosViewModel(UsuariosViewModel UsuariosViewModel)
+        public NUsuariosViewModel(UsuariosViewModel UsuariosViewModel, IDialogCoordinator instance)
         {
             this.Instancia = this;
             this.UsuariosViewModel = UsuariosViewModel;
+            this.dialogCoordinator = instance;
 
             //MODIFICANDO ELEMENTO
             if (this.UsuariosViewModel.Seleccionado != null)
@@ -49,7 +52,7 @@ namespace Practica6.ModelView
             return true;
         }
 
-        public void Execute(object parametro)
+        public async void Execute(object parametro)
         {
             if (parametro is Window)
             {
@@ -58,6 +61,8 @@ namespace Practica6.ModelView
                     Usuarios nuevo = new Usuarios(5, Username, true, Nombres, Apellidos, Email);
                     nuevo.Password = ((PasswordBox)((Window)parametro).FindName("TxtPassword")).Password;
                     this.UsuariosViewModel.agregarElemento(nuevo);
+                    await dialogCoordinator.ShowMessageAsync(this, 
+                    "Agregar usuario", "Elemento almacenado correctamente!", MessageDialogStyle.Affirmative);
                 }
                 else
                 {
@@ -69,6 +74,8 @@ namespace Practica6.ModelView
                     int posicion = this.UsuariosViewModel.usuarios.IndexOf(this.UsuariosViewModel.Seleccionado);
                     this.UsuariosViewModel.usuarios.RemoveAt(posicion);
                     this.UsuariosViewModel.usuarios.Insert(posicion, Usuario);
+                    await dialogCoordinator.ShowMessageAsync(this, 
+                    "Actualizar usuario", "Elemento actualizado correctamente!", MessageDialogStyle.Affirmative);
                 }
                 ((Window)parametro).Close();
             }
