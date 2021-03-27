@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica6"
         mc:Ignorable="d"
-        Title="VentanaUsuarios" Height="450" Width="800">
+        Title="VentanaUsuarios" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -15,5 +15,11 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <DataGrid SelectedItem="{Binding Seleccionado}" Grid.Row="0" Grid.Column="0" ItemsSource = "{Binding usuarios}" AutoGenerateColumns = "true"></DataGrid>
+        
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                <Button Content="Nuevo" Command="{Binding Instancia}" CommandParameter="Nuevo"/>
+                <Button Content="Eliminar" Command="{Binding Instancia}" CommandParameter="Eliminar"/>
+                <Button Content="Modificar" Command="{Binding Instancia}" CommandParameter="Modificar"/>
+        </StackPanel>
     </Grid>
 </Window>

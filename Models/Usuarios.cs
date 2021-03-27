@@ -24,5 +24,15 @@ namespace Practica6.Models
             this.Email = Email;
             this.Password = Password;
         }
+
+        public Usuarios(int Id, string Username, bool Enabled, string Nombres, string Apellidos, string Email)
+        {
+            this.Id = Id;
+            this.Username = Username;
+            this.Enabled = Enabled;
+            this.Nombres = Nombres;
+            this.Apellidos = Apellidos;
+            this.Email = Email;
+        }
     }
 }

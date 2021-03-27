@@ -24,3 +24,7 @@ C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Practica6.
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\ref\Practica6.dll
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Practica6.pdb
 C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Practica6.genruntimeconfig.cache
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NUsuariosView.g.cs
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NUsuariosView.baml
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NRolesView.g.cs
+C:\Users\dony2\Documents\FULLSTACK\Practica6\obj\Debug\net5.0-windows\Views\NRolesView.baml

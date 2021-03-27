@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 c:\Users\dony2\Documents\FULLSTACK\Practica6\App.xaml
-3-1980353145
+5-453152967
 
-11509006444
+15-765978887
 193-1891726104
-MainWindow.xaml;Views\RolesView.xaml;Views\UsuariosView.xaml;
+MainWindow.xaml;Views\NRolesView.xaml;Views\NUsuariosView.xaml;Views\RolesView.xaml;Views\UsuariosView.xaml;
 
-False
+True
 
